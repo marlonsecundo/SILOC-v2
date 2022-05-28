@@ -7,41 +7,55 @@
 body{
     margin: 0;
     padding: 0;
-    background: #f1f1f1;
+    width:100%;
+}
+
+.marcadagua{
+    background: url(background.png) right bottom/200px no-repeat;
+    background-attachment: fixed;
+    right: 20%;
+    transform: translate(86%, 0%);
+    position: relative;
 }
 
 header{
-    text-align: center;
+    text-align: justify;
     background-image: linear-gradient(to bottom, rgb(8, 73, 2), rgb(29, 126, 85));
-    padding: 42px;
     box-shadow: 2px 2px 3px #1b1b1b;
     align-items: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    height: 140px;
+    justify-content: center;
 }
 
 .search-box{
-    position: absolute;
-    top: 12%;
-    left:80%;
-    transform: translate(-50%, -50%);
+    transform: translate(-5%, -120%);
     background: #2f3640;
-    height: 50px;
+    height: 60px;
     border-radius: 40px;
-    padding: 10px;
+    padding: 15px;
     border: #f1f1f1 inset;
     box-shadow: 2px 2px 3px #131313a8;
+    float:right;
+    right: 5%;
+    top: 0%;
+    position: relative;
 }
 
 .search-btn{
     color: #f1f1f1;
     float: right;
-    width: 35px;
-    height: 25px;
+    width: 40px;
+    height: 30px;
     border-radius: 50%;
     background: #2f3640;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    top: 24%;
+    left: 85%;
+    position: absolute;
 }
 
 .search-txt{
@@ -53,7 +67,7 @@ header{
     color: white;
     font-size:18px;
     transition: 0.4s;
-    line-height: 25px;
+    line-height: 20px;
     width: 260px;
 }
 
@@ -83,7 +97,14 @@ header{
 }
 
 .container{
-    width: 850px;
+    width: 700px;
+    height: 300px;
+    margin: auto;
+
+}
+
+.linha1{
+    width: 620px;
     height: 80px;
     position: absolute;
     top: 50%;
@@ -94,8 +115,8 @@ header{
     justify-content: center;
 }
 
-.container2{
-    width: 850px;
+.linha2{
+    width: 620px;
     height: 80px;
     position: absolute;
     top: 60%;
@@ -106,8 +127,8 @@ header{
     justify-content: center;
 }
 
-.container3{
-    width: 850px;
+.linha3{
+    width: 620px;
     height: 80px;
     position: absolute;
     top: 70%;
@@ -119,8 +140,8 @@ header{
 }
 
 .btn{
-    width: 95px;
-    height: 70px;
+    width: 60px;
+    height: 50px;
     background: #8b8b8b;
     margin: 10px;
     border: none;
@@ -165,16 +186,20 @@ header{
 }
 
 h1{
+    text-align: center;
     color:#fff;
     letter-spacing: 12px;
-    font-size: 65px;
-    margin: auto;
-
+    font-size: 63px;
+    margin:auto;
+    display: flex;
+    justify-content: center;
 }
 
 header p{
-    font-size: 25px;
+    font-size: 22px;
     color: #f1f1f1;
+    justify-content: center;
+    text-align: center;
 }
 
 h3{
@@ -203,8 +228,14 @@ footer{
 }
 
 .logo{
-    position: absolute;
-    left: 20%;
-    justify-content: center;
-    bottom: 78%;
+    width: 200px; 
+    height: 200px; 
+    float:left; 
+    background: url(Brasao.png) center center/170px no-repeat; 
+    font-size:0;
+    left: 15%;
+    top: 4%;
+    position: relative;
+    transform: translate(-5%, -60%);
 }
+
