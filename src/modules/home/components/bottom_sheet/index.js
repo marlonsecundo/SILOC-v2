@@ -1,6 +1,6 @@
 import React from "react";
 
-function BottomSheet() {
+function BottomSheet({ onAddClick, onRemoveClick }) {
   const hideBottomSheet = () => {
     let container = document.querySelector("#bottomSheetContainer");
     let bottomSheet = document.querySelector(
@@ -17,8 +17,12 @@ function BottomSheet() {
   return (
     <div onClick={hideBottomSheet} id="bottomSheetContainer">
       <div id="bottomSheet">
-        <a href="#">Adicionar Cadáver</a>
-        <a href="#">Remover Cadáver</a>
+        <a href="#" onClick={onAddClick}>
+          Adicionar Cadáver
+        </a>
+        <a href="#" onClick={onRemoveClick}>
+          Remover Cadáver
+        </a>
       </div>
     </div>
   );
