@@ -1,6 +1,11 @@
 import React from "react";
 
+import "./index.css";
+
 function FreezerButton({ className, onClick, nick, index }) {
+  let btClassName = className;
+  const hasNick = nick && nick != "-1";
+
   const showBottomSheet = () => {
     let container = document.querySelector("#bottomSheetContainer");
     let bottomSheet = document.querySelector(
@@ -19,14 +24,15 @@ function FreezerButton({ className, onClick, nick, index }) {
 
   let nickText = "";
 
-  if (nick && nick != "-1") {
+  if (hasNick) {
     nickText = nick;
+    btClassName += " withNick";
   } else {
     nickText = "VAZIO";
   }
 
   return (
-    <button onClick={showBottomSheet} className={className}>
+    <button onClick={showBottomSheet} className={btClassName}>
       <b>{nickText}</b>
     </button>
   );
