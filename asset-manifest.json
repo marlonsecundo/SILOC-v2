@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.9e726fae.css",
-    "main.js": "./static/js/main.ba03a603.js",
-    "static/js/787.b67d13ac.chunk.js": "./static/js/787.b67d13ac.chunk.js",
-    "static/media/Brasao.png": "./static/media/Brasao.792e08c04514fc229d3d.png",
-    "static/media/background.png": "./static/media/background.e9c0f7e840492f05d527.png",
-    "index.html": "./index.html",
-    "main.9e726fae.css.map": "./static/css/main.9e726fae.css.map",
-    "main.ba03a603.js.map": "./static/js/main.ba03a603.js.map",
-    "787.b67d13ac.chunk.js.map": "./static/js/787.b67d13ac.chunk.js.map"
+    "main.css": "/siloc/static/css/main.9c1411b4.css",
+    "main.js": "/siloc/static/js/main.3737ceee.js",
+    "static/js/787.b67d13ac.chunk.js": "/siloc/static/js/787.b67d13ac.chunk.js",
+    "static/media/Brasao.png": "/siloc/static/media/Brasao.792e08c04514fc229d3d.png",
+    "static/media/background.png": "/siloc/static/media/background.e9c0f7e840492f05d527.png",
+    "index.html": "/siloc/index.html",
+    "main.9c1411b4.css.map": "/siloc/static/css/main.9c1411b4.css.map",
+    "main.3737ceee.js.map": "/siloc/static/js/main.3737ceee.js.map",
+    "787.b67d13ac.chunk.js.map": "/siloc/static/js/787.b67d13ac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e726fae.css",
-    "static/js/main.ba03a603.js"
+    "static/css/main.9c1411b4.css",
+    "static/js/main.3737ceee.js"
   ]
 }
