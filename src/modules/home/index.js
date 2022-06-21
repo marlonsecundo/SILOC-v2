@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 
@@ -7,14 +7,15 @@ import FreezerButton from "./components/freezer_button";
 import BottomSheet from "./components/bottom_sheet";
 import RegistrationNickPopup from "./components/registration_nick_popup";
 
-const array7 = Array.from(Array(7).keys());
-
 function Home() {
   const [registrationVisible, setRegistrationVisible] = useState(false);
+  const [search, setSearch] = useState("");
 
   const selectedIndex = useRef(0);
 
-  const [freezers, setFreezers] = useState(Array(21));
+  const [freezers, setFreezers] = useState(Array(30).fill(""));
+
+  const [freezersBySearch, setFreezersBySearch] = useState();
 
   const onAddClick = () => {
     setRegistrationVisible(true);
@@ -46,51 +47,36 @@ function Home() {
     selectedIndex.current = index;
   };
 
+  const onSearchInput = (text) => {
+    setSearch(text);
+  };
+
+  useEffect(() => {
+    const renderFreezers = freezers.map((i, index) => (
+      <FreezerButton
+        nick={freezers[index]}
+        index={index}
+        onClick={onFreezerClick}
+      ></FreezerButton>
+    ));
+
+    setFreezersBySearch(
+      renderFreezers.filter((e, index) => {
+        if (search === "") return true;
+
+        return freezers[index].includes(search);
+      })
+    );
+  }, [search, freezers]);
+
   return (
     <>
-      {/* {freezers.map((f) => console.table(freezers))} */}
-      <Header></Header>
+      <Header onSearchInput={onSearchInput}></Header>
       <div className="content">
         <h4>Câmaras Frias</h4>
         <h3>Necrotério</h3>
       </div>
-      <div className="container">
-        <div className="linha1">
-          {freezers &&
-            array7.map((i) => (
-              <FreezerButton
-                className={"btn btn" + (i + 1)}
-                nick={freezers[i]}
-                index={i}
-                onClick={onFreezerClick}
-              ></FreezerButton>
-            ))}
-        </div>
-
-        <div className="linha2">
-          {freezers &&
-            array7.map((i) => (
-              <FreezerButton
-                className={"btn btn" + (i + 8)}
-                nick={freezers[i + 7]}
-                index={i + 7}
-                onClick={onFreezerClick}
-              ></FreezerButton>
-            ))}
-        </div>
-
-        <div className="linha3">
-          {freezers &&
-            array7.map((i) => (
-              <FreezerButton
-                className={"btn btn" + (i + 15)}
-                nick={freezers[i + 14]}
-                index={i + 14}
-                onClick={onFreezerClick}
-              ></FreezerButton>
-            ))}
-        </div>
-      </div>
+      <div className="freezers">{freezersBySearch}</div>
       <BottomSheet
         onRemoveClick={onRemoveCorpse}
         onAddClick={onAddClick}

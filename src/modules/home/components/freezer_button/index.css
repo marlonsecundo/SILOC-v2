@@ -1,3 +1,59 @@
 .withNick {
   background-color: red !important;
 }
+
+.btText {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.btNumber {
+  background-color: gray;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  width: 130px;
+  height: 50px;
+  background: #8b8b8b;
+  margin: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-family: "montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: 0.4s;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  box-shadow: 2px 2px 3px #1b1b1b;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  background: rgb(26, 26, 26);
+  transition: 0.4s;
+}
+
+.btn:hover {
+  transform: rotateX(20deg);
+  box-shadow: 1px 1px 1px #1b1b1b;
+}
+.btn:after {
+  width: 100%;
+  height: 24px;
+  top: 100%;
+  left: 0;
+  transform-origin: 0 0;
+  transform: rotateX(-90deg);
+}

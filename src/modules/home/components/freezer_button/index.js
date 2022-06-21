@@ -2,8 +2,9 @@ import React from "react";
 
 import "./index.css";
 
-function FreezerButton({ className, onClick, nick, index }) {
-  let btClassName = className;
+function FreezerButton({ onClick, nick, index }) {
+  let btClassName = "btn";
+
   const hasNick = nick && nick != "-1";
 
   const showBottomSheet = () => {
@@ -33,7 +34,12 @@ function FreezerButton({ className, onClick, nick, index }) {
 
   return (
     <button onClick={showBottomSheet} className={btClassName}>
-      <b>{nickText}</b>
+      <div className="btNumber">
+        <b>{index + 1}</b>
+      </div>
+      <div className="btText">
+        <b>{nickText}</b>
+      </div>
     </button>
   );
 }

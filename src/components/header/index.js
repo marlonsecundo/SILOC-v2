@@ -2,7 +2,7 @@ import React from "react";
 
 import "./index.css";
 
-function Header() {
+function Header({ onSearchInput }) {
   return (
     <header className="cabecalho">
       <h1>SILOC</h1>
@@ -21,6 +21,9 @@ function Header() {
           className="search-txt"
           type="text"
           name=""
+          onChange={(e) => {
+            onSearchInput(e.target.value);
+          }}
           placeholder="Pesquisar cadáver pelo NIC"
         />
         <a className="search-btn" href="#"></a>
